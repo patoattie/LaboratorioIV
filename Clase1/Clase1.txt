@@ -4,9 +4,9 @@ LAB 4
 * Componentes
 
 TP1 -> Sala de juegos. Elegir un juego
-Modificar el layout (color, imagen, tipograf韆), preferentemente guardar en firebase pero sirve localStorage.
-Pensar adem醩 un juego propio que pueda medir, preferentemente tiempo, e integrarlo a la aplicaci髇.
-Correcci髇 en clase 6.
+Modificar el layout (color, imagen, tipograf铆a), preferentemente guardar en firebase pero sirve localStorage.
+Pensar adem谩s un juego propio que pueda medir, preferentemente tiempo, e integrarlo a la aplicaci贸n.
+Correcci贸n en clase 6.
 Pre-Entrega clase 7.
 Entrega en clase 8.
 
@@ -17,7 +17,7 @@ https://github.com/octaviovillegas/TP-Sala-de-Juegos-ANGULAR-
 1er Parcial clase 7.
 
 TP2 -> La Comanda
-Correcci髇 en clase 12.
+Correcci贸n en clase 12.
 Pre-Entrega en clase 13.
 Entrega en 1er fecha Final.
 
@@ -27,7 +27,20 @@ Entrega en 1er fecha Final.
 PPS
 TP La Comanda
 1 integrante hace los temas, 4 + 1 customizable
-1 integrante hace la traducci髇, 5 idiomas con posicionamiento simulado (modo desarrollador de Android)
-1 integrante hace la documentaci髇 + tutorial.
+1 integrante hace la traducci贸n, 5 idiomas con posicionamiento simulado (modo desarrollador de Android)
+1 integrante hace la documentaci贸n + tutorial.
 
 SASS (CSS programado)
+
+
+ANGULAR
+La meta es crear nuestros propios tags.
+En app-root va la p谩gina web completa que generamos, es un gran AJAX que genera un spa (single page application).
+Angular facilita el proceso de utilizar un componente.
+Dentro de src vamos a generar una carpeta por cada componente que vayamos a generar.
+src/assets -> Recursos (fotos, videos, docs)
+src/environments -> Seteos que afectan a toda la app (ej. conexion a firebase o php)
+
+ng generate (g) -> genera un nuevo componente.
+c -> componente + ruta
+class -> clase + ruta
