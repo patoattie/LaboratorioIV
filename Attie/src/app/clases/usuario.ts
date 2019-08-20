@@ -1,9 +1,14 @@
 export class Usuario
 {
-    public titulo:string;
+    private titulo:string;
 
     constructor(titulo:string)
     {
         this.titulo = titulo;
+    }
+
+    public getTitulo():string
+    {
+        return this.titulo;
     }
 }

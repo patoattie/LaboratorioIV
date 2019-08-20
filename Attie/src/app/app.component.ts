@@ -18,6 +18,6 @@ export class AppComponent
 
   ngOnInit()
   {
-    this.title = this.unUsuario.titulo;
+    this.title = this.unUsuario.getTitulo();
   }
 }
