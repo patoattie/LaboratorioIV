@@ -11,6 +11,7 @@ export class AppComponent implements OnInit
   unUsuario:Usuario;
   title:string;
 
+  //Si como parámetro del constructor tengo un objeto, entonces significa que se inyecta mediante un servicio.
   constructor()
   {
     this.unUsuario = new Usuario("Bienvenido");
