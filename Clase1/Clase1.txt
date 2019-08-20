@@ -1,0 +1,15 @@
+LAB 4
+* TS
+* POO
+* Componentes
+
+TP1 -> Sala de juegos. Elegir un juego
+Modificar el layout (color, imagen, tipografía), preferentemente guardar en firebase pero sirve localStorage.
+Pensar además un juego propio que pueda medir, preferentemente tiempo, e integrarlo a la aplicación.
+Corrección en clase 6.
+Pre-Entrega clase 7.
+Entrega en clase 8.
+
+Angular trabaja con scopes.
+
+https://github.com/octaviovillegas/TP-Sala-de-Juegos-ANGULAR-
