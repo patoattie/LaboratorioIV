@@ -13,3 +13,21 @@ Entrega en clase 8.
 Angular trabaja con scopes.
 
 https://github.com/octaviovillegas/TP-Sala-de-Juegos-ANGULAR-
+
+1er Parcial clase 7.
+
+TP2 -> La Comanda
+Corrección en clase 12.
+Pre-Entrega en clase 13.
+Entrega en 1er fecha Final.
+
+2do Parcial clase 14.
+
+
+PPS
+TP La Comanda
+1 integrante hace los temas, 4 + 1 customizable
+1 integrante hace la traducción, 5 idiomas con posicionamiento simulado (modo desarrollador de Android)
+1 integrante hace la documentación + tutorial.
+
+SASS (CSS programado)
