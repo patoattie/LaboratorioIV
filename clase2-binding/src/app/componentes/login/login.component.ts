@@ -9,11 +9,11 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit
 {
-  public usuarioLogeado:Usuario;
+  public usuario:Usuario;
 
   constructor(private router:Router)
   {
-    this.usuarioLogeado = new Usuario("usuario@usuario.com", "usuario");
+    this.usuario = new Usuario("usuario@usuario.com", "usuario");
   }
 
   ngOnInit() {
@@ -21,18 +21,18 @@ export class LoginComponent implements OnInit
 
   public loguear():void
   {
-    //console.log(this.usuarioLogeado);
-    if(this.usuarioLogeado.nombre === "usuario@usuario.com" && this.usuarioLogeado.clave === "usuario")
+    //console.log(this.usuario);
+    if(this.usuario.nombre === "usuario@usuario.com" && this.usuario.clave === "usuario")
     {
-      this.usuarioLogeado.error = false;
-      this.usuarioLogeado.ok = true;
+      this.usuario.error = false;
+      this.usuario.ok = true;
       //this.router.navigateByUrl("/bienvenido");
     }
     else
     {
       //this.router.navigateByUrl("/error");
-      this.usuarioLogeado.ok = false;
-      this.usuarioLogeado.error = true;
+      this.usuario.ok = false;
+      this.usuario.error = true;
     }
 
   }
