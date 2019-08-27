@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit
 
   constructor(private router:Router)
   {
-    this.usuarioLogeado = new Usuario();
+    this.usuarioLogeado = new Usuario("usuario@usuario.com", "usuario");
   }
 
   ngOnInit() {
@@ -24,11 +24,15 @@ export class LoginComponent implements OnInit
     //console.log(this.usuarioLogeado);
     if(this.usuarioLogeado.nombre === "usuario@usuario.com" && this.usuarioLogeado.clave === "usuario")
     {
-      this.router.navigateByUrl("/bienvenido");
+      this.usuarioLogeado.error = false;
+      this.usuarioLogeado.ok = true;
+      //this.router.navigateByUrl("/bienvenido");
     }
     else
     {
-      this.router.navigateByUrl("/error");
+      //this.router.navigateByUrl("/error");
+      this.usuarioLogeado.ok = false;
+      this.usuarioLogeado.error = true;
     }
 
   }

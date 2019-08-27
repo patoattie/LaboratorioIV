@@ -2,18 +2,15 @@
         <div class="container">
           <label for="uname"><b>Nombre: ({{usuarioLogeado.nombre}})</b></label>
           <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]="usuarioLogeado.nombre" required>
+          <p *ngIf = "usuarioLogeado.ok">Bienvenido {{usuarioLogeado.nombre}}!!!</p>
       
           <label for="psw"><b>Clave</b></label>
           <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]="usuarioLogeado.clave" required>
+          <p [hidden] = "!usuarioLogeado.error">Usuario o Clave Erróneos</p>
       
-          <button type="button" (click)="loguear()">Login</button>
+          <button type="button" (click)="loguear()">Ingresar</button>
           <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
+            <input type="checkbox" checked="checked" name="remember"> Recordar usuario
           </label>
-        </div>
-      
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" class="cancelbtn">Cancel</button>
-          <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
 </form>
