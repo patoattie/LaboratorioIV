@@ -1,6 +1,6 @@
 <form action="action_page.php">
         <div class="container">
-          <label for="uname"><b>Nombre</b></label>
+          <label for="uname"><b>Nombre: ({{usuarioLogeado.nombre}})</b></label>
           <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]="usuarioLogeado.nombre" required>
       
           <label for="psw"><b>Clave</b></label>
