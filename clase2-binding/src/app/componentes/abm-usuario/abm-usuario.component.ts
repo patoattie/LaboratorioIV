@@ -10,7 +10,6 @@ import {  } from "../listado/listado.component";
 export class AbmUsuarioComponent implements OnInit {
   nuevoUsuario: Usuario;
   confirmacionClave: string;
-  accionAlta: boolean = false;
   listadoUsuarios: Usuario[] = new Array();
 
   constructor() 
@@ -19,11 +18,6 @@ export class AbmUsuarioComponent implements OnInit {
   }
 
   ngOnInit(){
-  }
-
-  muestraListado(): boolean
-  {
-    return this.accionAlta;
   }
 
   muestraBoton(): boolean
