@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Usuario } from "../../clases/usuario";
+import { Usuario } from "src/app/clases/usuario";
 
 @Component({
   selector: 'app-listado',

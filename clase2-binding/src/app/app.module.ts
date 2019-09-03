@@ -9,6 +9,7 @@ import { BienvenidoComponent } from './componentes/bienvenido/bienvenido.compone
 import { ErrorComponent } from './componentes/error/error.component';
 import { ListadoComponent } from './componentes/listado/listado.component';
 import { AbmUsuarioComponent } from './componentes/abm-usuario/abm-usuario.component';
+import { MaestroDetalleComponent } from './componentes/maestro-detalle/maestro-detalle.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AbmUsuarioComponent } from './componentes/abm-usuario/abm-usuario.compo
     BienvenidoComponent,
     ErrorComponent,
     ListadoComponent,
-    AbmUsuarioComponent
+    AbmUsuarioComponent,
+    MaestroDetalleComponent
   ],
   imports: [
     BrowserModule,

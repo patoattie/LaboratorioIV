@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Usuario } from "../../clases/usuario";
 
 @Component({
@@ -10,14 +10,15 @@ export class AbmUsuarioComponent implements OnInit
 {
   nuevoUsuario: Usuario;
   confirmacionClave: string;
-  listadoUsuarios: Usuario[] = new Array();
-
+  @Output() usuarioCreado: EventEmitter<any> = new EventEmitter<any>();
+  
   constructor() 
   {
     this.inicializarDatos();
   }
 
-  ngOnInit(){
+  ngOnInit()
+  {
   }
 
   muestraBoton(): boolean
@@ -29,8 +30,8 @@ export class AbmUsuarioComponent implements OnInit
 
   cargarUsuario(): void
   {
-    this.listadoUsuarios.push(this.nuevoUsuario);
-    this.inicializarDatos();
+    this.usuarioCreado.emit(new Usuario(this.nuevoUsuario.nombre, this.nuevoUsuario.clave));
+    //this.inicializarDatos();
   }
 
   inicializarDatos(): void
