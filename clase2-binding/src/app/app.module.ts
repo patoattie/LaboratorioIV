@@ -7,13 +7,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './componentes/login/login.component';
 import { BienvenidoComponent } from './componentes/bienvenido/bienvenido.component';
 import { ErrorComponent } from './componentes/error/error.component';
+import { ListadoComponent } from './componentes/listado/listado.component';
+import { AbmUsuarioComponent } from './componentes/abm-usuario/abm-usuario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     BienvenidoComponent,
-    ErrorComponent
+    ErrorComponent,
+    ListadoComponent,
+    AbmUsuarioComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+<div>
+  <label>Nombre:
+    <input [(ngModel)]="nuevoUsuario.nombre" placeholder="Nombre"/>
+  </label>
+  <label>Clave:
+    <input [(ngModel)]="nuevoUsuario.clave" placeholder="Clave"/>
+  </label>
+  <label>Reingrese Clave:
+    <input [(ngModel)]="confirmacionClave" placeholder="Reingrese Clave"/>
+  </label>
+</div>
+
+<div *ngIf="muestraBoton()">
+    <button (click)="cargarUsuario()">
+        Crear Usuario
+    </button>
+</div>
+
+<app-listado [listadoUsuarios]="listadoUsuarios"></app-listado>
