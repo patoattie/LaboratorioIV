@@ -15,7 +15,7 @@ export class AbmUsuarioComponent implements OnInit {
 
   constructor() 
   {
-    this.limpiarDatos();
+    this.inicializarDatos();
   }
 
   ngOnInit(){
@@ -34,10 +34,10 @@ export class AbmUsuarioComponent implements OnInit {
   cargarUsuario(): void
   {
     this.listadoUsuarios.push(this.nuevoUsuario);
-    this.limpiarDatos();
+    this.inicializarDatos();
   }
 
-  limpiarDatos(): void
+  inicializarDatos(): void
   {
     this.nuevoUsuario = new Usuario("", "");
     this.confirmacionClave = "";
