@@ -17,8 +17,7 @@ export class AbmUsuarioComponent implements OnInit
     this.inicializarDatos();
   }
 
-  ngOnInit()
-  {
+  ngOnInit() {
   }
 
   muestraBoton(): boolean
