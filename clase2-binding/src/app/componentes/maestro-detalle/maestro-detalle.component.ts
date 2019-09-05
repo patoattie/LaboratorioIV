@@ -8,7 +8,7 @@ import { ListadoComponent } from "src/app/componentes/listado/listado.component"
   styleUrls: ['./maestro-detalle.component.css']
 })
 export class MaestroDetalleComponent implements OnInit {
-  listadoUsuarios: Usuario[] = new Array();
+  listado: Usuario[] = new Array();
 
   constructor() { }
 
@@ -17,7 +17,7 @@ export class MaestroDetalleComponent implements OnInit {
 
   procesarAltaUsuario(nuevoUsuario: any): void
   {
-    this.listadoUsuarios.push(nuevoUsuario);
+    this.listado.push(nuevoUsuario);
   }
 
 }
