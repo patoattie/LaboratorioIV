@@ -9,6 +9,7 @@ import { Usuario } from 'src/app/clases/usuario';
 export class MaestroDetalleComponent implements OnInit {
   listado: Usuario[] = new Array();
   usuarioSeleccionado: Usuario;
+  estadoABM: string;
 
   constructor() { }
 
@@ -22,7 +23,11 @@ export class MaestroDetalleComponent implements OnInit {
 
   procesarSeleccion($event: any): void
   {
-    //this.usuarioSeleccionado = new Usuario($event.nombre, $event.clave);
     this.usuarioSeleccionado = $event;
+  }
+
+  procesarEstado($event: any): void
+  {
+    this.estadoABM = $event;
   }
 }

@@ -10,10 +10,16 @@
   </label>
 </div>
 
-<div *ngIf="muestraBoton()">
-    <button (click)="cargarUsuario()">
-        Crear Usuario
-    </button>
+<div>
+  <button (click)="cargarUsuario()" *ngIf="muestraBotonCrear()">
+    Crear Usuario
+  </button>
+  <button (click)="modificarUsuario()" *ngIf="muestraBotonModificar()">
+    Modificar Usuario
+  </button>
+  <button (click)="cancelar()" *ngIf="muestraBotonCancelar()">
+    Cancelar
+  </button>
 </div>
 
 <!-- <app-listado [listadoUsuarios]="listadoUsuarios"></app-listado> -->

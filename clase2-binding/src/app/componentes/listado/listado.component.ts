@@ -9,6 +9,7 @@ import { Usuario } from "src/app/clases/usuario";
 export class ListadoComponent implements OnInit {
   @Input() listadoUsuarios: Usuario[];
   @Output() usuarioSeleccionado: EventEmitter<any> = new EventEmitter<any>();
+  @Output() estadoABM: EventEmitter<any> = new EventEmitter<any>();
   usuario: Usuario;
 
   constructor() 
@@ -24,5 +25,6 @@ export class ListadoComponent implements OnInit {
   editarUsuario(usuarioEditado: Usuario): void
   {
     this.usuarioSeleccionado.emit(usuarioEditado);
+    this.estadoABM.emit("M");
   }
 }
