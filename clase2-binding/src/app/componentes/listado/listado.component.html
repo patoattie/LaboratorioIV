@@ -2,5 +2,6 @@
 <ul>
   <li *ngFor="let usuario of listadoUsuarios">
     {{usuario.nombre}}
+    <button (click)="editarUsuario(usuario)">Editar</button>
   </li>
 </ul>

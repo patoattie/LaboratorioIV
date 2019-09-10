@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Usuario } from "../../clases/usuario";
 
 @Component({
@@ -8,34 +8,36 @@ import { Usuario } from "../../clases/usuario";
 })
 export class AbmUsuarioComponent implements OnInit 
 {
-  nuevoUsuario: Usuario;
+  //nuevoUsuario: Usuario;
   confirmacionClave: string;
   @Output() usuarioCreado: EventEmitter<any> = new EventEmitter<any>();
+  @Input() usuarioParaEditar: Usuario;
   
   constructor() 
   {
-    this.inicializarDatos();
   }
 
   ngOnInit() {
+    this.inicializarDatos();
   }
 
   muestraBoton(): boolean
   {
-    return (this.nuevoUsuario.clave === this.confirmacionClave 
-      && this.nuevoUsuario.clave.trim().length != 0 
-      && this.nuevoUsuario.nombre.trim().length != 0);
+    return (this.usuarioParaEditar.clave === this.confirmacionClave 
+      && this.usuarioParaEditar.clave.trim().length != 0 
+      && this.usuarioParaEditar.nombre.trim().length != 0);
   }
 
   cargarUsuario(): void
   {
-    this.usuarioCreado.emit(new Usuario(this.nuevoUsuario.nombre, this.nuevoUsuario.clave));
-    //this.inicializarDatos();
+    this.usuarioCreado.emit(new Usuario(this.usuarioParaEditar.nombre, this.usuarioParaEditar.clave));
+    this.inicializarDatos();
   }
 
   inicializarDatos(): void
   {
-    this.nuevoUsuario = new Usuario("", "");
+    //this.nuevoUsuario = new Usuario("", "");
+    this.usuarioParaEditar = new Usuario("", "");
     this.confirmacionClave = "";
   }
 

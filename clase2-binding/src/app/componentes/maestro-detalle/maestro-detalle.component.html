@@ -1,2 +1,2 @@
-<app-abm-usuario (usuarioCreado)="procesarAltaUsuario($event)"></app-abm-usuario>
-<app-listado [listadoUsuarios]="listado"></app-listado>
+<app-abm-usuario (usuarioCreado)="procesarAltaUsuario($event)" [usuarioParaEditar]="usuarioSeleccionado"></app-abm-usuario>
+<app-listado [listadoUsuarios]="listado" (usuarioSeleccionado)="procesarSeleccion($event)"></app-listado>

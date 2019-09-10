@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Usuario } from "src/app/clases/usuario";
 
 @Component({
@@ -8,6 +8,8 @@ import { Usuario } from "src/app/clases/usuario";
 })
 export class ListadoComponent implements OnInit {
   @Input() listadoUsuarios: Usuario[];
+  @Output() usuarioSeleccionado: EventEmitter<any> = new EventEmitter<any>();
+  usuario: Usuario;
 
   constructor() 
   {
@@ -19,4 +21,8 @@ export class ListadoComponent implements OnInit {
   ngOnInit() {
   }
 
+  editarUsuario(usuarioEditado: Usuario): void
+  {
+    this.usuarioSeleccionado.emit(usuarioEditado);
+  }
 }
