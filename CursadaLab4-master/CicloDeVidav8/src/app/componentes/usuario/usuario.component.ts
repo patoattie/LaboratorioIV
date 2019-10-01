@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Usuario } from 'src/app/clases/usuario';
+import { AuthService } from 'src/app/auth/auth.service';
+
 
 @Component({
   selector: 'app-usuario',
@@ -15,7 +17,7 @@ export class UsuarioComponent implements OnInit {
   public vista = 'grilla';
   public editar = false;
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }

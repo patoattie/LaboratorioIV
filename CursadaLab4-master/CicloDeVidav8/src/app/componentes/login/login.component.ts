@@ -21,8 +21,10 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  Loguear() {
-    this.authService.login().subscribe(resp => this.route.navigate(['usuario']));
+  Loguear() 
+  {
+    //this.authService.login().subscribe(resp => this.route.navigate(['usuario']));
+    this.authService.login(this.usuario).subscribe(resp => this.route.navigate(['paises']));
   }
 
 }

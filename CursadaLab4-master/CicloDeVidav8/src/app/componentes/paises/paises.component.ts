@@ -1,4 +1,5 @@
 import { PaisesService } from './../../servicios/paises/paises.service';
+import { AuthService } from "../../auth/auth.service";
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,11 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaisesComponent implements OnInit {
 
-  constructor(private paisesService: PaisesService) { }
+  constructor(private paisesService: PaisesService, private authService: AuthService) { }
 
   public paises = [];
+  public usuario = {};
 
   ngOnInit() {
+    this.usuario = this.authService.usuarioLogueado;
     this.paisesService.BuscarTodos().subscribe(element => this.paises = element);
   }
 
