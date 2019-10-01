@@ -40,4 +40,16 @@ export class AuthService {
     localStorage.setItem('usuario', null);
     this.usuarioLogueado = null;
   }
+
+  esAdmin(): boolean
+  {
+    let retorno: boolean = false;
+
+    if(this.usuarioLogueado.perfil.toLowerCase() == "admin")
+    {
+      retorno = true;
+    }
+
+    return retorno;
+  }
 }

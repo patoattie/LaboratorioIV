@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ListadoDeUsuariosComponent,
     UsuarioComponent,
     GrillaUsuariosComponent,
-    PaisesComponent
+    PaisesComponent,
+    DetallePaisComponent
   ],
   imports: [
     BrowserModule,

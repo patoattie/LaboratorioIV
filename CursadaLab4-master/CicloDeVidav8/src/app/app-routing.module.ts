@@ -8,6 +8,7 @@ import { ErrorComponent } from './componentes/error/error.component';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { PaisesComponent } from './componentes/paises/paises.component';
 import { AuthGuard } from './auth/auth.guard';
+import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.component';
 
 const miRuteo = [
   { path: 'bienvenida', component: BienvenidaComponent },
@@ -16,6 +17,7 @@ const miRuteo = [
     canActivate: [AuthGuard],
     data: {animation: 'Usuario'} },
   { path: 'paises', component: PaisesComponent },
+  { path: 'detalle-pais', component: DetallePaisComponent },
   { path: '', component: LoginComponent },
   { path: '**', component: ErrorComponent }
 ];

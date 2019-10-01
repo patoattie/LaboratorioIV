@@ -1,6 +1,7 @@
 import { PaisesService } from './../../servicios/paises/paises.service';
 import { AuthService } from "../../auth/auth.service";
 import { Component, OnInit } from '@angular/core';
+import { Pais } from 'src/app/clases/pais';
 
 @Component({
   selector: 'app-paises',
@@ -12,7 +13,7 @@ export class PaisesComponent implements OnInit {
 
   constructor(private paisesService: PaisesService, private authService: AuthService) { }
 
-  public paises = [];
+  public paises: Pais[];
   public usuario = {};
 
   ngOnInit() {
