@@ -10,7 +10,10 @@ import { Pais } from 'src/app/clases/pais';
 export class PaisesService {
   public paisSeleccionado: Pais;
 
-  constructor(private miHttp: MihttpService, private router: Router) { }
+  constructor(private miHttp: MihttpService, private router: Router) 
+  {
+    this.paisSeleccionado = JSON.parse(localStorage.getItem('paisSeleccionado'));
+  }
 
   BuscarTodos() {
     return this.miHttp.httpGetO('all');
@@ -19,7 +22,7 @@ export class PaisesService {
   detalle(unPais: Pais)
   {
     this.paisSeleccionado = unPais;
-console.log(this.paisSeleccionado);
+    localStorage.setItem('paisSeleccionado', JSON.stringify(unPais));
     this.router.navigate(['detalle-pais']);
   }
 }

@@ -7,11 +7,12 @@ import { PaisesService } from 'src/app/servicios/paises/paises.service';
   styleUrls: ['./detalle-pais.component.css']
 })
 export class DetallePaisComponent implements OnInit {
+  public pais = {};
 
   constructor(public paisesService: PaisesService) { }
 
   ngOnInit() {
-    console.log(this.paisesService.paisSeleccionado);
+    this.pais = this.paisesService.paisSeleccionado;
   }
 
 }
