@@ -9,10 +9,15 @@ export class PeliculasService {
   constructor(private httpPeliculas: HttppeliculasService) { }
 
   BuscarTodos() {
-    return this.httpPeliculas.httpGetO();
+    return this.httpPeliculas.httpGetO(this.httpPeliculas.url);
   }
 
   BuscarCfg() {
     return this.httpPeliculas.httpGetCfg();
+  }
+
+  public BuscarDetalle(id: string)
+  {
+    return this.httpPeliculas.httpGetO(this.httpPeliculas.getUrlDetalle(id));
   }
 }

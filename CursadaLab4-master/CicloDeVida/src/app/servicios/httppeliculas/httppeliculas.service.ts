@@ -9,16 +9,21 @@ export class HttppeliculasService {
 
   constructor(public http: HttpClient) { }
 
-  private url = 'http://api.themoviedb.org/3/trending/all/day?api_key=73f9841cbba42072a2e1203892c07179';
+  public url = 'http://api.themoviedb.org/3/trending/all/day?api_key=73f9841cbba42072a2e1203892c07179';
   private urlCfg = 'https://api.themoviedb.org/3/configuration?api_key=73f9841cbba42072a2e1203892c07179';
 
-  public httpGetO (): Observable<any> {
-    return this.http.get( this.url )
+  public httpGetO (url: string): Observable<any> {
+    return this.http.get( url )
       .pipe( res => res);
   }
 
   public httpGetCfg (): Observable<any> {
     return this.http.get( this.urlCfg )
       .pipe( res => res);
+  }
+
+  public getUrlDetalle(id: string): string
+  {
+    return 'https://api.themoviedb.org/3/movie/' + id + '?api_key=73f9841cbba42072a2e1203892c07179&language=es-AR';
   }
 }

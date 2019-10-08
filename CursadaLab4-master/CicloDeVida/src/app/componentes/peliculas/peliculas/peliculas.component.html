@@ -1,14 +1,24 @@
 <h1>PELICULAS</h1>
 <table>
   <tr>
+    <th>ID</th>
     <th>Titulo</th>
+    <th>Genero</th>
+    <th>Fecha</th>
+    <th>Popularidad</th>
     <th>Reseña</th>
     <th>Poster</th>
   </tr>
-  <tr *ngFor="let pelicula of peliculas" >
-      <td>{{pelicula.title}}</td>
-      <td>{{pelicula.overview}}</td>
-      <td><img src="https://image.tmdb.org/t/p/w780{{pelicula.poster_path}}" alt="" style="width: 100%;"></td>
+  <!-- <tr *ngFor="let pelicula of peliculas" > -->
+  <tr *ngFor="let unDetalle of detalle" >
+    <td>{{unDetalle.id}}</td>
+    <td>{{unDetalle.title}}</td>
+    <td *ngIf="unDetalle.genres[0] != undefined">{{unDetalle.genres[0].name}}</td>
+    <td *ngIf="unDetalle.genres[0] == undefined">otro</td>
+    <td>{{unDetalle.release_date}}</td>
+    <td>{{unDetalle.popularity}}</td>
+    <td>{{unDetalle.overview}}</td>
+    <td><img src="https://image.tmdb.org/t/p/w780{{unDetalle.poster_path}}" alt="" style="width: 100%;"></td>
   </tr>
 
 </table>

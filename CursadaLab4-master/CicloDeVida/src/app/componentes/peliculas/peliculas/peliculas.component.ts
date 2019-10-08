@@ -12,6 +12,7 @@ export class PeliculasComponent implements OnInit {
   constructor(private peliculasService: PeliculasService) { }
 
   public peliculas = [];
+  public detalle = [];
   public configuracion = [];
 
   ngOnInit() 
@@ -19,11 +20,24 @@ export class PeliculasComponent implements OnInit {
     this.peliculasService.BuscarTodos().subscribe((peliculas) => 
     {
       this.peliculas = peliculas.results;
+      
+      this.peliculas.forEach(unaPelicula => 
+      {
+        this.getDetalle(unaPelicula.id);
+      });
     });
 
     this.peliculasService.BuscarCfg().subscribe((config) => 
     {
       this.configuracion = config.results;
+    });
+  }
+
+  public async getDetalle(id :string)
+  {
+    await this.peliculasService.BuscarDetalle(id).subscribe((pelicula) => 
+    {
+      this.detalle.push(pelicula);
     });
   }
 
